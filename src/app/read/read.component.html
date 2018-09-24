@@ -1,0 +1,8 @@
+<div class="read" *ngIf="$heroes">
+    <h3>Heroes</h3>
+    <ul>
+        <li (click)="deleteHero(hero.name)" *ngFor="let hero of $heroes | async">
+            <a [href]="hero.url" target="_blank">{{hero.name}}</a>
+        </li>
+    </ul>
+</div>
